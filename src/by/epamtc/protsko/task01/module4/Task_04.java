@@ -9,15 +9,13 @@ public class Task_04 {
         return -3 / (x + 1);
     }
 
-    static void printResult(double x) {
-        System.out.println(getFunctionResult(x));
-    }
-
 
     //----- check result -----
     public static void main(String[] args) {
-        double res = getFunctionResult(-38);
-        System.out.println(res);
-        printResult(-38);
+        double result1 = getFunctionResult(-38);
+        double result2 = getFunctionResult(38);
+
+        System.out.println(result1);
+        System.out.println(result2);
     }
 }
