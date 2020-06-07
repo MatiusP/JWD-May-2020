@@ -12,10 +12,10 @@ public class Task_04 {
 
     //----- check result -----
     public static void main(String[] args) {
-        double result1 = getFunctionResult(-38);
-        double result2 = getFunctionResult(38);
+        double functionResult1 = getFunctionResult(-38);
+        double functionResult2 = getFunctionResult(38);
 
-        System.out.println(result1);
-        System.out.println(result2);
+        System.out.println(functionResult1);
+        System.out.println(functionResult2);
     }
 }

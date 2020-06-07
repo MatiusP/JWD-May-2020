@@ -33,8 +33,8 @@ public class Task_06 {
 
     //----- check result -----
     public static void main(String[] args) {
-        int a1 = 15;
-        int d = -20;
+        int a1 = Integer.MAX_VALUE;
+        int d = Integer.MAX_VALUE;
         System.out.println("Integer range will be exceeded at n = " + exceedingIntRange(a1, d));
         System.out.println("Long range will be exceeded at n = " + exceedingLongRange(a1, d));
 
