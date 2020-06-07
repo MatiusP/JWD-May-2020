@@ -1,4 +1,4 @@
-package by.epam.protsko.module_4;
+package by.epamtc.protsko.task01.module4;
 
 public class Task_08 {
 
