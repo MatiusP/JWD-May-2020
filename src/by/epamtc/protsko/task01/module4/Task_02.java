@@ -55,9 +55,6 @@ public class Task_02 {
             case 9:
             case 11:
                 return 30;
-
-            default:
-                System.out.println("Incorrect day of year");
         }
         return 0;
     }
@@ -73,8 +70,12 @@ public class Task_02 {
     }
 
     static void getDayMonthByDayNumber(int dayOfYear) {
-        getDayOfMonth(dayOfYear);
-        System.out.println(dayOfMonth + "." + monthName(numberOfMonth));
+        if ((dayOfYear > 0) && (dayOfYear <= 365)) {
+            getDayOfMonth(dayOfYear);
+            System.out.println(dayOfMonth + "." + monthName(numberOfMonth));
+        } else {
+            System.out.println("Incorrect day of year.");
+        }
     }
 
 
@@ -83,7 +84,6 @@ public class Task_02 {
         getDayMonthByDayNumber(15);
         getDayMonthByDayNumber(90);
         getDayMonthByDayNumber(128);
-        getDayMonthByDayNumber(243);
         getDayMonthByDayNumber(246);
         getDayMonthByDayNumber(273);
         getDayMonthByDayNumber(274);
@@ -91,5 +91,6 @@ public class Task_02 {
         getDayMonthByDayNumber(304);
         getDayMonthByDayNumber(305);
         getDayMonthByDayNumber(365);
+        getDayMonthByDayNumber(367);
     }
 }
