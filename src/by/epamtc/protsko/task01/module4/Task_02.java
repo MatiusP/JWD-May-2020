@@ -41,6 +41,12 @@ public class Task_02 {
             case 2:
                 return 28;
 
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                return 30;
+
             case 1:
             case 3:
             case 5:
@@ -49,12 +55,6 @@ public class Task_02 {
             case 10:
             case 12:
                 return 31;
-
-            case 4:
-            case 6:
-            case 9:
-            case 11:
-                return 30;
         }
         return 0;
     }
@@ -69,7 +69,7 @@ public class Task_02 {
         dayOfMonth = (byte) dayOfYear;
     }
 
-    static void getDayMonthByDayNumber(int dayOfYear) {
+    public static void getDayMonthByDayNumber(int dayOfYear) {
         if ((dayOfYear > 0) && (dayOfYear <= 365)) {
             getDayOfMonth(dayOfYear);
             System.out.println(dayOfMonth + "." + monthName(numberOfMonth));

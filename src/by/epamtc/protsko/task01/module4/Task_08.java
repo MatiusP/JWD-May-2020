@@ -2,7 +2,7 @@ package by.epamtc.protsko.task01.module4;
 
 public class Task_08 {
 
-    static void getFunctionResult(double segmentStart, double segmentEnd, double step, double constant) {
+    public static void getFunctionResult(double segmentStart, double segmentEnd, double step, double constant) {
         double functionResult;
         for (double x = segmentStart; x <= segmentEnd; x += step) {
             if (x == 15) {

@@ -14,19 +14,19 @@ public class Task_05 {
         return number / 100;
     }
 
-    static int getDigitSum(int number) {
+    public static int getDigitSum(int number) {
         return getUnits(number) + getTens(number) + getHundreds(number);
     }
 
-    static int getDigitMultiplication(int number) {
+    public static int getDigitMultiplication(int number) {
         return getUnits(number) * getTens(number) * getHundreds(number);
     }
 
-    static int getDigitSwap(int number) {
+    public static int getDigitSwap(int number) {
         return getTens(number) * 100 + getHundreds(number) * 10 + getUnits(number);
     }
 
-    static int getNewNumber(int number) {
+    public static int getNewNumber(int number) {
         return getUnits(number) * 1000 + number;
     }
 

@@ -10,7 +10,7 @@ public class Task_07 {
         return (int) (number * 1000) - (getIntegerPartOfNumber(number) * 1000);
     }
 
-    static double getNewNumber(double number) {
+    public static double getNewNumber(double number) {
         return getFractionalPartOfNumber(number) + (double) getIntegerPartOfNumber(number) / 1000;
     }
 

@@ -2,7 +2,7 @@ package by.epamtc.protsko.task01.module4;
 
 public class Task_09 {
 
-    static long getFunctionResult(int limitOfGrowth) {
+    public static long getFunctionResult(int limitOfGrowth) {
         int elementSum = 1;
         long functionResult = 1;
 
@@ -16,7 +16,7 @@ public class Task_09 {
 
     //----- check result -----
     public static void main(String[] args) {
-        System.out.println(getFunctionResult(10)); //reply
+        System.out.println(getFunctionResult(10)); //answer
         System.out.println(getFunctionResult(15));
     }
 }

@@ -3,13 +3,13 @@ package by.epamtc.protsko.task01.module4;
 import java.util.Scanner;
 
 public class Task_10 {
-    private static int number;
-    private static int nextNumber;
-    private static boolean isEnterCorrect = true;
-    private static boolean isSequenceIncreasing = true;
-    private static boolean isHasSameAdjacentNumbers = false;
-    private static boolean isSignOfNumberVarious = true;
-    private static int numberCount;
+    static int number;
+    static int nextNumber;
+    static boolean isEnterCorrect = true;
+    static boolean isSequenceIncreasing = true;
+    static boolean isHasSameAdjacentNumbers = false;
+    static boolean isSignOfNumberVarious = true;
+    static int numberCount;
 
 
     private static int getEnteredIntData() {
@@ -25,18 +25,18 @@ public class Task_10 {
         return 0;
     }
 
-    static boolean checkEnteredData() {
-        if (!isEnterCorrect){
+    public static boolean checkCountEnteredData() {
+        if (!isEnterCorrect) {
             return false;
         }
-        if (numberCount !=2) {
+        if (numberCount != 2) {
             System.out.println("You entered less than two numbers");
             return false;
         }
         return true;
     }
 
-    static void readSequence() {
+    public static void readSequence() {
         number = getEnteredIntData();
         if (number != 0) {
             do {
@@ -53,21 +53,21 @@ public class Task_10 {
     }
 
 
-    static boolean isSequenceIncreasing() {
+    public static boolean isSequenceIncreasing() {
         if (nextNumber < number && nextNumber != 0) {
             isSequenceIncreasing = false;
         }
         return isSequenceIncreasing;
     }
 
-    static boolean isHasSameAdjacentNumbers() {
+    public static boolean isHasSameAdjacentNumbers() {
         if (nextNumber == number && nextNumber != 0) {
             isHasSameAdjacentNumbers = true;
         }
         return isHasSameAdjacentNumbers;
     }
 
-    static boolean isAlternatingCharacters() {
+    public static boolean isAlternatingCharacters() {
         if (nextNumber != 0 && ((double) number / nextNumber >= 0)) {
             isSignOfNumberVarious = false;
         }
@@ -78,7 +78,7 @@ public class Task_10 {
     //----- check result -----
     public static void main(String[] args) {
         readSequence();
-        if (checkEnteredData()) {
+        if (checkCountEnteredData()) {
             System.out.println(isSequenceIncreasing() ? "The sequence is increasing" : "The sequence is not increasing");
             System.out.println(isHasSameAdjacentNumbers() ? "The sequence has same adjacent numbers" :
                     "The sequence has't same adjacent numbers");
