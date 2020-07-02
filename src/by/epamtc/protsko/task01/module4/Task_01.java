@@ -6,9 +6,9 @@ public class Task_01 {
         double valueUnderRoot = (b * b) + (4 * a * c);
         if (valueUnderRoot < 0) {
             return Double.POSITIVE_INFINITY;
-        } else {
-            return b + Math.sqrt(valueUnderRoot);
         }
+
+        return b + Math.sqrt(valueUnderRoot);
     }
 
     private static double denominator(double a) {
@@ -24,8 +24,8 @@ public class Task_01 {
             System.out.println("Trying to extract a root from a negative number.");
             return Double.POSITIVE_INFINITY;
         }
-        return (numerator(a, b, c) / denominator(a)) - (Math.pow(a, 3) * c) + Math.pow(b, -2);
 
+        return (numerator(a, b, c) / denominator(a)) - (Math.pow(a, 3) * c) + Math.pow(b, -2);
     }
 
 
@@ -34,6 +34,5 @@ public class Task_01 {
         System.out.println("expression result: " + expressionResult(4, 1, 3));
         System.out.println("expression result: " + expressionResult(0, 3, 4));
         System.out.println("expression result: " + expressionResult(-20, 1, 3));
-
     }
 }

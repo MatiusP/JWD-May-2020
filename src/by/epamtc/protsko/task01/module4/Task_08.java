@@ -2,15 +2,15 @@ package by.epamtc.protsko.task01.module4;
 
 public class Task_08 {
 
-    public static void getFunctionResult(double segmentStart, double segmentEnd, double step, double constant) {
-        double functionResult;
+    public static void functionResult(double segmentStart, double segmentEnd, double step, double constant) {
+        double result;
         for (double x = segmentStart; x <= segmentEnd; x += step) {
             if (x == 15) {
-                functionResult = (x + constant) * 2;
+                result = (x + constant) * 2;
             } else {
-                functionResult = (x - constant) + 6;
+                result = (x - constant) + 6;
             }
-            System.out.println("If x = " + x + ", function result = " + functionResult);
+            System.out.println("If x = " + x + ", function result = " + result);
         }
     }
 
@@ -22,6 +22,6 @@ public class Task_08 {
         double step = 0.5;
         double constant = 1;
 
-        getFunctionResult(segmentStart, segmentEnd, step, constant);
+        functionResult(segmentStart, segmentEnd, step, constant);
     }
 }

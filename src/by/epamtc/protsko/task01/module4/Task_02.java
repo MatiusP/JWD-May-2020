@@ -2,8 +2,8 @@ package by.epamtc.protsko.task01.module4;
 
 public class Task_02 {
 
-    static byte numberOfMonth;
-    static byte dayOfMonth;
+    private static byte numberOfMonth;
+    private static byte dayOfMonth;
 
     private static String monthName(byte numberOfMonth) {
         switch (numberOfMonth) {
@@ -59,7 +59,7 @@ public class Task_02 {
         return 0;
     }
 
-    private static void getDayOfMonth(int dayOfYear) {
+    private static void dayOfMonth(int dayOfYear) {
         numberOfMonth = 1;
 
         while (dayOfYear > getCountDaysOfMonth(numberOfMonth)) {
@@ -69,9 +69,9 @@ public class Task_02 {
         dayOfMonth = (byte) dayOfYear;
     }
 
-    public static void getDayMonthByDayNumber(int dayOfYear) {
+    public static void dayOfMonthByDayNumber(int dayOfYear) {
         if ((dayOfYear > 0) && (dayOfYear <= 365)) {
-            getDayOfMonth(dayOfYear);
+            dayOfMonth(dayOfYear);
             System.out.println(dayOfMonth + "." + monthName(numberOfMonth));
         } else {
             System.out.println("Incorrect day of year.");
@@ -81,16 +81,16 @@ public class Task_02 {
 
     //----- check result -----
     public static void main(String[] args) {
-        getDayMonthByDayNumber(15);
-        getDayMonthByDayNumber(90);
-        getDayMonthByDayNumber(128);
-        getDayMonthByDayNumber(246);
-        getDayMonthByDayNumber(273);
-        getDayMonthByDayNumber(274);
-        getDayMonthByDayNumber(303);
-        getDayMonthByDayNumber(304);
-        getDayMonthByDayNumber(305);
-        getDayMonthByDayNumber(365);
-        getDayMonthByDayNumber(367);
+        dayOfMonthByDayNumber(15);
+        dayOfMonthByDayNumber(90);
+        dayOfMonthByDayNumber(128);
+        dayOfMonthByDayNumber(246);
+        dayOfMonthByDayNumber(273);
+        dayOfMonthByDayNumber(274);
+        dayOfMonthByDayNumber(303);
+        dayOfMonthByDayNumber(304);
+        dayOfMonthByDayNumber(305);
+        dayOfMonthByDayNumber(365);
+        dayOfMonthByDayNumber(367);
     }
 }

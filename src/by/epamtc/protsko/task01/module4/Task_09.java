@@ -2,21 +2,21 @@ package by.epamtc.protsko.task01.module4;
 
 public class Task_09 {
 
-    public static long getFunctionResult(int limitOfGrowth) {
+    public static long functionResult(int limitOfGrowth) {
         int elementSum = 1;
-        long functionResult = 1;
+        long result = 1;
 
         for (int i = 2; i <= limitOfGrowth; i++) {
             elementSum += i;
-            functionResult *= elementSum;
+            result *= elementSum;
         }
-        return functionResult;
+        return result;
     }
 
 
     //----- check result -----
     public static void main(String[] args) {
-        System.out.println(getFunctionResult(10)); //answer
-        System.out.println(getFunctionResult(15));
+        System.out.println(functionResult(10)); //answer
+        System.out.println(functionResult(15));
     }
 }

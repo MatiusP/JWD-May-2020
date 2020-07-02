@@ -3,25 +3,26 @@ package by.epamtc.protsko.task01.module4;
 import java.util.Scanner;
 
 public class Task_10 {
-    static int number;
-    static int nextNumber;
-    static boolean isEnterCorrect = true;
-    static boolean isSequenceIncreasing = true;
-    static boolean isHasSameAdjacentNumbers = false;
-    static boolean isSignOfNumberVarious = true;
-    static int numberCount;
+    private static int number;
+    private static int nextNumber;
+    private static boolean isEnterCorrect = true;
+    private static boolean isSequenceIncreasing = true;
+    private static boolean isHasSameAdjacentNumbers = false;
+    private static boolean isSignOfNumberVarious = true;
+    private static int numberCount;
 
 
-    private static int getEnteredIntData() {
+    private static int enteredIntData() {
         int enteredData;
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNext() & scanner.hasNextInt()) {
             enteredData = scanner.nextInt();
             return enteredData;
-        } else {
-            System.out.println("Incorrect value entry!");
-            isEnterCorrect = false;
         }
+
+        System.out.println("Incorrect value entry!");
+        isEnterCorrect = false;
+
         return 0;
     }
 
@@ -37,10 +38,10 @@ public class Task_10 {
     }
 
     public static void readSequence() {
-        number = getEnteredIntData();
+        number = enteredIntData();
         if (number != 0) {
             do {
-                nextNumber = getEnteredIntData();
+                nextNumber = enteredIntData();
                 if (nextNumber != 0) {
                     isSequenceIncreasing();
                     isHasSameAdjacentNumbers();
@@ -51,7 +52,6 @@ public class Task_10 {
             } while (nextNumber != 0);
         }
     }
-
 
     public static boolean isSequenceIncreasing() {
         if (nextNumber < number && nextNumber != 0) {

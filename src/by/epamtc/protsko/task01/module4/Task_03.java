@@ -6,7 +6,7 @@ public class Task_03 {
     private static double b;
     private static double c;
 
-    public static void changingNumbersByCondition(double a, double b, double c) {
+    public static void changeNumbersByCondition(double a, double b, double c) {
         if ((a > b) && (b > c)) {
             Task_03.a = a * 2;
             Task_03.b = b * 2;
@@ -38,13 +38,11 @@ public class Task_03 {
 
         System.out.println("Initial values: \t" + "a = " + a + ",  b = " + b + ",  c = " + c);
 
-        changingNumbersByCondition(a, b, c);
+        changeNumbersByCondition(a, b, c);
         a = getA();
         b = getB();
         c = getC();
 
         System.out.println("Modified values: \t" + "a = " + a + ",  b = " + b + ",  c = " + c);
-
-
     }
 }
